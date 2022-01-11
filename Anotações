@@ -1,0 +1,4 @@
+    
+    .botaoAsistir button, .botaoTrailer button{
+    width: 90%;
+    }
