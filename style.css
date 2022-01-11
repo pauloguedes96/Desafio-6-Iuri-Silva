@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body{
+    overflow-x: hidden;
+}
+
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-primaria);
+}
+
+/* variáveis */
+:root{
+    --cor-botao-assistir: #0072d2;
+    --cor-botao-trailer: #131318;
+    --cor-estrelas: #FFA800;
+    --branco-primario: #ffffff;
+
+    --font-primaria: 'B612', sans-serif;
+}
+
+/* ================================================= */
+
+.containerSite{
+    height: 100vh;
+    width: 100vw;
+/*     background-color: #FFA800; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./image/fundo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mask{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.603);
+}
+
+/* ================================================= */
+
+.header{
+    width: 100%;
+    height: 50vh;
+/*     background-color: red; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    color: var(--branco-primario);
+}
+
+.header h3 {
+    margin-top: 50px;
+    letter-spacing: 1.2px;
+}
+
+.header h1{
+    font-size: 6rem;
+}
+
+/* ================================================= */
+
+.main{
+    width: 100%;
+    height: 50vh;
+/*     background-color: #2b7401; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start
+}
+
+.informacoes{
+/*     background-color: rgb(0, 0, 0); */
+    display: grid;
+    grid-template: auto auto auto / auto 180px auto auto;
+    gap: 10px;
+}
+
+.item{
+    display: flex;
+    align-items: center;
+    color: var(--branco-primario);
+}
+
+.capaFilme{
+    width: 190px;
+/*     background-color: rgb(25, 86, 179); */
+    
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    margin-right: 40px;
+    border-radius: 10px;
+}
+
+.descricao{
+/*     background-color: rgb(37, 48, 14); */
+    
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 2;
+    grid-column-end: 5;
+}
+
+.duracao{
+/*     background-color: rgb(14, 24, 59); */
+
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 2;
+
+    font-weight: bold;
+    gap: 10px;
+}
+
+.nota{
+/*     background-color: rgb(141, 81, 32); */
+
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 3;
+}
+
+.ano{
+/*     background-color: rgb(28, 206, 132); */
+
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 4;
+    grid-column-end: 5;
+
+    font-weight: bold;
+}
+
+.botaoAsistir{
+/*     background-color: rgb(117, 12, 86); */
+
+    grid-row-start: 3;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+
+.botaoTrailer{
+/*     background-color: rgb(95, 88, 23); */
+
+    grid-row-start: 3;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 3;
+}
+
+.botaoAsistir button, .botaoTrailer button{
+    padding: 13px 25px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--branco-primario);
+    letter-spacing: 1px;
+    border: solid 1px var(--branco-primario);
+    border-radius: 5px;
+}
+
+.botaoAsistir button:hover, .botaoTrailer button:hover{
+    filter: brightness(90%);
+}
+
+.botaoAsistir button {
+    background-color: var(--cor-botao-assistir);
+}
+
+.botaoTrailer button{
+    background-color: var(--cor-botao-trailer);
+}
+
+/* ================================================= */
+
+@media only screen and (max-width: 800px) {
+
+    .containerSite{
+        overflow-x: hidden;
+    }
+
+    .header{
+        justify-content: center;
+    }
+
+    .informacoes{
+/*         width: 50%; */
+/*         background-color: rgb(0, 0, 0); */
+        display: grid;
+        grid-template: auto auto auto auto / auto auto auto;
+        gap: 10px;
+        padding: 0px 50px 50px 50px;
+    }
+    .capaFilme{
+        grid-row-start: 1;
+        grid-row-end: 1;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        margin: auto;
+    }
+    .descricao{
+        grid-row-start: 2;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    .duracao{
+        grid-row-start: 3;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+    .nota{
+        grid-row-start: 3;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 2;
+    }
+    .ano{
+        grid-row-start: 3;
+        grid-row-end: 3;
+        grid-column-start: 3;
+        grid-column-end: 3;
+    }
+    .botaoAsistir{
+        grid-row-start: 4;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+    .botaoTrailer{
+        grid-row-start: 4;
+        grid-row-end: 4;
+        grid-column-start: 2;
+        grid-column-end: 2;
+    }
+}
+
+/* ================================================= */
+
+@media only screen and (min-width: 1370px) {
+
+    .informacoes{
+        zoom: 1.4;
+    }
+}
+
+#iconGitHub{
+    position: fixed;
+    z-index: 10000;
+    right: 0;
+    top: 0;
+}
